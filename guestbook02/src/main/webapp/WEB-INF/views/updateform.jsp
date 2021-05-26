@@ -33,7 +33,8 @@
 	</form>
 	
 	 -->
-	<form action="<%=request.getContextPath()%>/update.jsp" method="post">
+	<form action="<%=request.getContextPath()%>/gb" method="post">
+	<input type='hidden' name="a" value="update_message">
 	<input type='hidden' name="no" value="<%=request.getParameter("no") %>">
 		<table width=600 border=1>
 			<tr>
@@ -51,7 +52,7 @@
 			</tr>
 		</table>
 	</form>
-	<a href="<%=request.getContextPath()%>">메인으로 돌아가기</a>
+	<a href="<%=request.getContextPath()%>/gb">메인으로 돌아가기</a>
 	<br>
 
 </body>
