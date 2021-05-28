@@ -5,7 +5,7 @@
 	pageEncoding="UTF-8"%>
 
 <%
-	List<GuestbookVo> list = (List<GuestbookVo>) request.getAttribute("list");
+List<GuestbookVo> list = (List<GuestbookVo>) request.getAttribute("list");
 %>
 <html>
 <head>
@@ -44,16 +44,18 @@
 			<td><%=list.get(i).getName()%></td>
 			<td><%=list.get(i).getRegDate()%></td>
 			<td align="center">
-				<form method="post" action="<%=request.getContextPath()%>/gb" style="display:inline-block">
-					<input type="hidden" name="a" value="update">
-					<input type="hidden" name="no" value="<%=list.get(i).getNo()%>" >
+				<form method="post" action="<%=request.getContextPath()%>/gb"
+					style="display: inline-block">
+					<input type="hidden" name="a" value="update"> <input
+						type="hidden" name="no" value="<%=list.get(i).getNo()%>">
 					<input type='submit' value="수정">
 				</form>
 			</td>
 			<td align="center">
-				<form method="post" action="<%=request.getContextPath()%>/gb" style="display:inline-block">
-					<input type="hidden" name="a" value="delete">
-					<input type="hidden" name="no" value="<%=list.get(i).getNo()%>" >
+				<form method="post" action="<%=request.getContextPath()%>/gb"
+					style="display: inline-block">
+					<input type="hidden" name="a" value="delete"> <input
+						type="hidden" name="no" value="<%=list.get(i).getNo()%>">
 					<input type='submit' value="삭제">
 				</form>
 			</td>
