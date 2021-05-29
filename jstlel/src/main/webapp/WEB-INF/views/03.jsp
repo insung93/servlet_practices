@@ -10,7 +10,7 @@
 </head>
 <body>
 	<h1>JSTL(forEach Tag) test</h1>
-	<c:set var="count" value="${fn:length(users) }"/>	
+	<c:set var="count" value="${fn:length(users) }"/>
 	<c:forEach items="${users }" var="user" varStatus="status">
 		[${count-status.index }] (${status.index }:${status.count }) [${user.no }:${user.name }] <br/>
 	</c:forEach>
